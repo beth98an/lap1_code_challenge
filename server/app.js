@@ -34,7 +34,6 @@ app.get('/results', (req, res) => {
 app.get('/results/:id', (req, res) => {
     let idx =(req.params.id)
     let matchingFact = results.find(facto => facto.id.toLowerCase() === idx)
-    console.log(matchingFact)
     res.send(matchingFact.fact)
 }) 
 

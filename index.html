@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <!-- <script defer src="script.js"></script> -->
-    <title>Document</title>
+    <script defer src="script.js"></script>
+    <title>google rebuild</title>
 </head>
 <body>
 
@@ -23,19 +23,19 @@
 
          <div>
             <form id="search">
-                <input type="text" id="inputtxt" placeholder="Search..." name="searchBar" size="50">
-                <button type="submit">Search</button> 
+                <input type="text" id="inputtxt" placeholder="Search..." name="searchBar" title="Search" size="50">
+                <input type="button"  id="searchBtn" value="Search">
             </form>
-            <form> 
-                <button type="submit" id="app">API</button>    
+            <form id="app">
+                <input type="button" value="API" id="appBtn">
             </form>
         </div>
+        
         <ul id="results"></ul>
         <h4 id="fact"></h4>
     </div>
     <footer>
         <p>United Kingdom</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
