@@ -31,18 +31,18 @@ app.get('/results', (req, res) => {
     res.send(results)
 })
 
-// app.get('/results/:id', (req, res) => {
-//     let idx =(req.params.id)
-//     let matchingFact = results.find(facto => facto.id.toLowerCase() === idx)
-//     console.log(matchingFact)
-//     res.send(matchingFact.fact)
-// }) 
+app.get('/results/:id', (req, res) => {
+    let idx =(req.params.id)
+    let matchingFact = results.find(facto => facto.id.toLowerCase() === idx)
+    console.log(matchingFact)
+    res.send(matchingFact.fact)
+}) 
 
 
 
-//module.exports = app
-const port = 3000
+module.exports = app
+// const port = 3000
 
-app.listen(port, () => {
-    console.log(`Server now live on port ${port}`)
-})
+// app.listen(port, () => {
+//     console.log(`Server now live on port ${port}`)
+// })
