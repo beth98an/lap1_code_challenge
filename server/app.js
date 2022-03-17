@@ -16,23 +16,33 @@ let results = [
     Her actual birthday - 21 April - and her official birthday, which is held on a Saturday in June - when the weather's better!`},
     {id: "Ronaldo" , fact: "Cristiano Ronaldo dos Santos Aveiro was born in the São Pedro parish of Funchal, the capital of the Portuguese island of Madeira, and grew up in the nearby parish of Santo António."},
     {id: "planes" , fact: "The reason why everyone complains about the quality of airplane food is that your sense of taste and smell decreases up to 50% during high altitude flights."},
-    {id: "" , fact: ""},
-    {id: "" , fact: ""},
-    {id: "" , fact: ""},
     {id: "mars" , fact: `Mars has 2 moons called Deimos and Phobos. They are named after the two horses that pull the Roman god of war, Mars', chariot. They may be asteroids captured by Mars' gravity.`}
+    // {id: "" , fact: ""},
+    // {id: "" , fact: ""},
+    // {id: "" , fact: ""},
+   
 ]
 
 app.get('/results', (req, res) => {
+    // let result = []
+    // for (item in results){
+    //     result.push(results[item].fact)
+    // }
     res.send(results)
 })
 
-app.get('/results/:id', (req, res) => {
-    let idx =(req.params.id)
+// app.get('/results/:id', (req, res) => {
+//     let idx =(req.params.id)
+//     let matchingFact = results.find(facto => facto.id.toLowerCase() === idx)
+//     console.log(matchingFact)
+//     res.send(matchingFact.fact)
+// }) 
 
-    let matchingFact = results.find(fact => fact.id.toLowerCase() === idx)
-    res.send(matchingFact.fact)
-}) 
 
 
+//module.exports = app
+const port = 3000
 
-module.exports = app
+app.listen(port, () => {
+    console.log(`Server now live on port ${port}`)
+})
